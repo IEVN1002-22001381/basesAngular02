@@ -1,0 +1,80 @@
+.cine-card {
+    background: url('cinepolis.jpeg') center/cover no-repeat fixed;
+    max-width: 1000%;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.cine-card h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+.cine-card h1.text-center {
+    text-align: center;
+    font-size: 1.8rem;
+    border-bottom: none;
+    margin-bottom: 25px;
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+.row {
+    margin-bottom: 15px;
+}
+
+.col {
+    padding: 15px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.col h1 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.btn {
+    margin: 0 10px;
+    padding: 8px 20px;
+}
+
+br {
+    margin-bottom: 10px;
+}
+
+.col:last-child p {
+    font-weight: bold;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .col {
+        margin: 10px 0;
+    }
+    
+    .cine-card {
+        padding: 15px;
+    }
+}

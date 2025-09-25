@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { HeroesListPipe } from './heroes/heroes-list.pipe';
 import { HeroesFilterPipe } from './heroes/heroes-filter.pipe';
 import { OperasBasComponent } from './formularios/operas-bas/operas-bas.component';
+import { CinepolisComponent } from './formularios/cinepolis/cinepolis.component';
+import { ResistenciasComponent } from './app/resistencias/resistencias.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { OperasBasComponent } from './formularios/operas-bas/operas-bas.componen
     HeroesListComponent,
     HeroesListPipe,
     HeroesFilterPipe,
-    OperasBasComponent
+    OperasBasComponent,
+    CinepolisComponent,
+    ResistenciasComponent
   ],
   imports: [
     BrowserModule,
