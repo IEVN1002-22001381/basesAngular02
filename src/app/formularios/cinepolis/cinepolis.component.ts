@@ -19,7 +19,7 @@ export class CinepolisComponent {
   mensaje:string="";
 
 
-  max():boolean{
+  max():boolean{ //esta es la funcion que tienes que quitar o cambiar
     this.maxboletos=(parseFloat(this.cantcompradores)*7).toString();
     if (parseInt(this.cantboletos) > parseInt(this.maxboletos)) {
       this.mensaje = `No puedes comprar más de ${this.maxboletos} boletos.`;

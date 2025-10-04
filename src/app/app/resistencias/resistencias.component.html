@@ -1,1 +1,80 @@
-<p>resistencias works!</p>
+<div class="container">
+  <h2>Resistencias</h2>
+
+  <div class="container">
+    <div class="row align-items-start">
+      <div class="col">
+        <p>1ra Banda:</p>
+        <div *ngFor="let c of colores" class="color-option">
+          <input type="radio" name="banda1" [ngModel]="resistencia.color1" (ngModelChange)="resistencia.color1 = c" [value]="c">
+          <span class="color-sample" [style.background-color]="getColorValue(c.nombre)"></span>
+          {{c.nombre}} ({{c.valor}})
+        </div>
+      </div>
+      <div class="col">
+        <p>2da Banda:</p>
+        <div *ngFor="let c of colores" class="color-option">
+          <input type="radio" name="banda2" [ngModel]="resistencia.color2" (ngModelChange)="resistencia.color2 = c" [value]="c">
+          <span class="color-sample" [style.background-color]="getColorValue(c.nombre)"></span>
+          {{c.nombre}} ({{c.valor}})
+        </div>
+      </div>
+      <div class="col">
+        <p>Multiplicador:</p>
+        <div *ngFor="let c of multiplicadores" class="color-option">
+          <input type="radio" name="banda3" [ngModel]="resistencia.color3" (ngModelChange)="resistencia.color3 = c" [value]="c">
+          <span class="color-sample" [style.background-color]="getColorValue(c.nombre)"></span>
+          {{c.nombre}} ({{c.multiplicador}})
+        </div>
+      </div>
+      <div class="col"><br>
+        <p>Tolerancia:</p>
+        <div *ngFor="let t of tolerancias" class="color-option">
+        <input type="radio" name="tol" [ngModel]="resistencia.tolerancia" (ngModelChange)="resistencia.tolerancia = t" [value]="t">
+        <span class="color-sample" [style.background-color]="getColorValue(t.nombre)"></span>
+        {{t.nombre}}
+        </div>
+        <br>
+        <button (click)="calcular()">Calcular</button>
+    </div>
+    </div>
+  </div>
+
+
+  <table *ngIf="resistencia.valor > 0">
+    <tr>
+      <th>Color1</th>
+      <th>Color2</th>
+      <th>Color3</th>
+      <th>Tolerancia</th>
+      <th>Valor</th>
+      <th>Valor máximo</th>
+      <th>Valor mínimo</th>
+    </tr>
+    <tr>
+      <td>
+        <span class="color-sample small" [style.background-color]="getColorValue(resistencia.color1.nombre)"></span>
+        {{resistencia.color1.nombre}}
+      </td>
+      <td>
+        <span class="color-sample small" [style.background-color]="getColorValue(resistencia.color2.nombre)"></span>
+        {{resistencia.color2.nombre}}
+      </td>
+      <td>
+        <span class="color-sample small" [style.background-color]="getColorValue(resistencia.color3.nombre)"></span>
+        {{resistencia.color3.nombre}}
+      </td>
+      <td>
+        <span class="color-sample small" [style.background-color]="getColorValue(resistencia.tolerancia.nombre)"></span>
+        {{resistencia.tolerancia.nombre}}
+      </td>
+      <td>{{resistencia.valor}} </td>
+      <td>{{resistencia.valorMaximo}} </td>
+      <td>{{resistencia.valorMinimo}} </td>
+    </tr>
+  </table>
+</div>
+<div>
+    <br><br><br>
+
+</div>
